@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ 
+/* reset */
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+ 
+/* base */
+:root{
+    --bg: #F1F1F1;
+    --text: #292C35;
+    --label: #111;
+}
+ 
+.dark-mode:root{
+    --bg: #292C35;
+    --text: #F1F1F1;
+}
+ 
+body{
+    background-color: var(--bg);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+ 
+main{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+/* Switch */
+ 
+.checkbox-component{
+    position: relative;
+}
+ 
+.checkbox-component input[type="checkbox"]{
+    width: 235.38px;
+    height: 102px;
+ 
+    position: relative;
+    -webkit-appearance: none;
+    background-color: var(--label);
+    border-radius: 50px;
+}
+ 
+.checkbox-component input[type="checkbox"]::before{
+    content: '';
+    width: 86.31px;
+    height: 86.31px;
+ 
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 12px;
+ 
+    background-color: #F1F1F1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+ 
+    transition: 0.3s;
+    cursor: pointer;
+}
+ 
+ 
+.checkbox-component input:checked[type="checkbox"]::before{
+    left: 138px;
+}
+/* imgaes swicth */
+.moon{
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    top: 5px;
+    left: 5px;
+}
+ 
+.sun{
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    top: 5px;
+    left: 138px;
+}
